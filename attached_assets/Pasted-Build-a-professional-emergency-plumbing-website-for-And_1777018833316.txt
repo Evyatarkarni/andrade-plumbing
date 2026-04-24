@@ -1,0 +1,127 @@
+Build a professional emergency plumbing website for "Andrade Plumbing & Rooter" — a family-run plumbing company in Woodland Hills, CA owned by Ivan Andrade, serving the San Fernando Valley 24/7.
+
+BUSINESS DETAILS:
+- Name: Andrade Plumbing & Rooter
+- Owner: Ivan Andrade
+- Phone: (818) 714-4581
+- Address: 6355 De Soto Ave, Woodland Hills, CA 91367
+- Hours: Open 24 hours, 7 days a week
+- Google Rating: 5.0 stars (27 reviews)
+- Service Areas: Woodland Hills, Calabasas, Tarzana, West Hills, Canoga Park, Encino, Sherman Oaks
+
+TECH STACK:
+- Next.js 14 with App Router
+- TypeScript
+- Tailwind CSS
+- Static export (next.config.js with `output: 'export'`) so it deploys free on Vercel
+- No backend, no database
+- next/image for all images
+
+DESIGN DIRECTION:
+- Trustworthy, professional, "call us at 2am" vibe — the feel of a family business you'd trust with your home
+- Primary color: Deep navy blue #0A2540 (trust)
+- Accent color: Safety orange #FF6B35 (urgency, CTAs)
+- Background: white with very light gray sections #F8F9FB
+- Typography: Inter for body, Poppins Bold for headings (Google Fonts)
+- Use Lucide React icons throughout
+- Mobile-first — assume 80% of visitors are on phones
+
+PAGES:
+1. Home (/)
+2. Services (/services)  
+3. Service Areas (/service-areas)
+4. About (/about)
+5. Contact (/contact)
+
+HOME PAGE SECTIONS (top to bottom):
+
+1. Sticky top bar (navy background, white text):
+   Left: "ANDRADE PLUMBING" logo text
+   Right: "📞 (818) 714-4581" as click-to-call link with "24/7 Emergency" label
+   On mobile: just the phone number button
+
+2. Hero section (full width, navy background with subtle plumbing tools overlay):
+   H1: "Woodland Hills' Most Trusted 24/7 Emergency Plumber"
+   Subhead: "Family-owned. Licensed & insured. Same-day service across the San Fernando Valley."
+   Two CTAs: Orange "Call Now: (818) 714-4581" (tel: link) and white outline "Get a Free Quote"
+   Trust badges below: "⭐ 5.0 Google Rating" "🛡️ Licensed & Insured" "⏰ Available 24/7" "🏠 Family-Owned"
+
+3. Services grid (6 cards with icons):
+   - Emergency Plumbing (alert icon)
+   - Water Heater Repair & Install (flame icon)
+   - Drain Cleaning & Hydro Jetting (droplet icon)
+   - Slab Leak Detection (search icon)
+   - Sewer Line Repair (pipe icon)
+   - Whole House Repiping (wrench icon)
+   Each card: icon, title, 1-sentence description, "Learn More" link
+
+4. "Why Andrade" section (4 value props in a row):
+   - Family-Owned & Operated (heart icon)
+   - 24/7 Emergency Response (clock icon)  
+   - Upfront Honest Pricing (dollar icon)
+   - Licensed Master Plumbers (shield icon)
+
+5. Testimonials carousel (3 real reviews from Google):
+   Review 1: "Ivan was so sweet. He came out same day, explained everything very clearly with our leak, and made us feel very taken care of. He's the best and we will definitely use him again! As a busy working mom, it makes me feel so grateful to have the help of a kind and knowledgeable person." — Google Review
+   
+   Review 2: "Ivan did an outstanding job. He was professional, on time, and very knowledgeable. Not only did he fix the problem quickly, but he also explained what caused it and gave us tips to prevent future issues. His attention to detail and respect for our home really stood out." — Google Review
+   
+   Review 3: "We had old cast iron sewer under the house. Ivan came to our house and explained what he can do to help. He is a very good communicator, honest and kind. The cost is reasonable. He is the best plumber in the neighborhood. I highly recommend." — Google Review
+
+6. Service areas section:
+   H2: "Proudly Serving the San Fernando Valley"
+   Grid of cities: Woodland Hills, Calabasas, Tarzana, West Hills, Canoga Park, Encino, Sherman Oaks, Reseda
+   Embedded Google Map centered at 34.1862, -118.5910 (6355 De Soto Ave)
+
+7. Final CTA section (orange background, white text):
+   H2: "Plumbing Emergency? We're Available Right Now."
+   Subhead: "No extra charge for nights, weekends, or holidays."
+   Big white button: "Call (818) 714-4581"
+
+8. Footer (navy background):
+   Logo, phone, address, hours, service areas quick links, "Licensed & Insured" badge, copyright
+
+SERVICES PAGE:
+H1: "Plumbing Services in Woodland Hills & Beyond"
+For each of the 6 services, a detailed section with: icon, H2 title, 2-paragraph description, bullet list of what's included, CTA button "Call Now: (818) 714-4581"
+
+SERVICE AREAS PAGE:
+H1: "Serving the San Fernando Valley 24/7"
+For each city (Woodland Hills, Calabasas, Tarzana, West Hills, Canoga Park, Encino), write 1-2 unique paragraphs about serving that area (mention local neighborhoods, response times, common plumbing issues). This is critical for local SEO.
+
+ABOUT PAGE:
+H1: "Meet Ivan — Your Neighborhood Plumber"
+Content: Ivan's a family man who's been solving plumbing problems in the Valley for years. Founded Andrade Plumbing to bring honest, family-owned service back to a trade full of overpriced big-name companies. Known for same-day service, upfront pricing, and treating every home like his own. Licensed, insured, and background-checked. Placeholder photo of a plumber.
+
+CONTACT PAGE:
+H1: "Get in Touch — We Answer 24/7"
+Left column: big click-to-call button, address, hours, service areas
+Right column: contact form (Name, Phone, Email, What can we help with? dropdown with service options, Message) — use Formspree with placeholder action="https://formspree.io/f/YOUR_ID"
+Below: embedded Google Map
+
+TECHNICAL REQUIREMENTS:
+- Sticky "Call Now" floating button on mobile (bottom right of screen, always visible)
+- All phone numbers as <a href="tel:+18187144581">
+- SEO meta tags per page (title, description, Open Graph image, Twitter card)
+- LocalBusiness schema markup in root layout with:
+  - @type: "Plumber"
+  - name, address, phone, openingHours (24/7), geo coordinates (34.1862, -118.5910)
+  - areaServed: array of cities
+  - aggregateRating: 5.0 / 27 reviews
+- Fast loading — use next/image with proper sizing
+- Favicon using a wrench or water drop icon
+
+SEO TARGETS (use naturally in H1s and meta):
+- "emergency plumber Woodland Hills"
+- "24 hour plumber San Fernando Valley" 
+- "water heater repair Woodland Hills"
+- "slab leak plumber Calabasas"
+- "drain cleaning Tarzana"
+
+IMAGES:
+Use Unsplash URLs for placeholders:
+- Hero: search "plumber working" or use https://images.unsplash.com/photo-1585128792020-803d29415281
+- Services: plumbing tools, pipes, water heater
+- About: friendly plumber portrait
+
+Build this as a complete, production-ready, mobile-optimized site. Make it look like a $5,000 website — clean, modern, trustworthy. Focus on conversion: every section should push toward calling (818) 714-4581.

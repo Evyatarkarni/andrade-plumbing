@@ -1,0 +1,31 @@
+kind = "web"
+previewPath = "/"
+title = "Andrade Plumbing & Rooter"
+version = "1.0.0"
+id = "artifacts/andrade-plumbing"
+router = "path"
+
+[[integratedSkills]]
+name = "react-vite"
+version = "1.0.0"
+
+[[services]]
+name = "web"
+paths = [ "/" ]
+localPort = 23490
+
+[services.development]
+run = "pnpm --filter @workspace/andrade-plumbing run dev"
+
+[services.production]
+build = [ "pnpm", "--filter", "@workspace/andrade-plumbing", "run", "build" ]
+publicDir = "artifacts/andrade-plumbing/dist/public"
+serve = "static"
+
+[[services.production.rewrites]]
+from = "/*"
+to = "/index.html"
+
+[services.env]
+PORT = "23490"
+BASE_PATH = "/"
